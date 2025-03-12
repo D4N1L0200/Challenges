@@ -29,7 +29,7 @@ function draw() {
 
 	fill(255);
 	stroke(255);
-	textSize(20);
+	textSize(15);
 	textAlign(LEFT, TOP);
 	text(
 		`Speed: ${speed.toFixed(4)} = ${mx.toFixed(4)} ^ ${my.toFixed(4)}`,

@@ -1,3 +1,7 @@
+html {
+	overflow: hidden;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
@@ -5,6 +9,7 @@ body {
 	background-color: #1f1e33;
 	color: #f0f8ff;
 	text-align: center;
+	overflow: hidden;
 }
 
 header {
