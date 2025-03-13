@@ -14,7 +14,7 @@ body {
 
 header {
 	background-color: #b000e6;
-	padding: 20px;
+	padding: 10px;
 }
 
 header h1 {
@@ -42,5 +42,4 @@ header h1 a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 20px;
 }

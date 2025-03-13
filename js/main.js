@@ -24,8 +24,7 @@ async function loadChallenge(num) {
 
 async function loadChallenges() {
 	try {
-		const listResponse = await fetch("challenges/challenges.json");
-		const challengeList = await listResponse.json();
+		const challengeList = [0, 1, 2];
 
 		for (let num of challengeList) {
 			await loadChallenge(num);
