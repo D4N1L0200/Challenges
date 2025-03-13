@@ -24,7 +24,7 @@ async function loadChallenge(num) {
 
 async function loadChallenges() {
 	try {
-		const challengeList = [0, 1, 2];
+		const challengeList = [0, 1, 2, 3];
 
 		for (let num of challengeList) {
 			await loadChallenge(num);
