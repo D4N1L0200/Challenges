@@ -4,7 +4,7 @@ let boxSize = 0;
 let apple = null;
 let state = "paused";
 let score = null;
-let maxScore = 0;
+let highScore = localStorage.getItem("ch3_highscore") || 0;
 
 class Apple {
 	constructor() {
@@ -85,8 +85,9 @@ class Snake {
 
 		if (this.hitsNext(newPos)) {
 			state = "lost";
-			if (score > maxScore) {
-				maxScore = score;
+			if (score > highScore) {
+				highScore = score;
+				localStorage.setItem("ch3_highscore", highScore);
 			}
 		}
 
@@ -121,7 +122,7 @@ function update() {
 			textAlign(CENTER, CENTER);
 			text("Paused. Press space to play.", width / 2, height / 2);
 			text(
-				"Current Score: " + score + " | Max Score: " + maxScore,
+				"Current Score: " + score + " | High Score: " + highScore,
 				width / 2,
 				height / 2 + 20
 			);
@@ -138,7 +139,7 @@ function update() {
 			text("You won! Press space to play again.", width / 2, height / 2);
 			fill(255);
 			text(
-				"Current Score: " + score + " | Max Score: " + maxScore,
+				"Current Score: " + score + " | High Score: " + highScore,
 				width / 2,
 				height / 2 + 20
 			);
@@ -155,7 +156,7 @@ function update() {
 			);
 			fill(255);
 			text(
-				"Current Score: " + score + " | Max Score: " + maxScore,
+				"Current Score: " + score + " | High Score: " + highScore,
 				width / 2,
 				height / 2 + 20
 			);
