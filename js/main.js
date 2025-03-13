@@ -34,4 +34,19 @@ async function loadChallenges() {
 	}
 }
 
+function isMobile() {
+	return /Mobi|Android|iPhone/i.test(navigator.userAgent);
+}
+
+function showModal() {
+	if (isMobile()) {
+		document.getElementById("mobile-warning").style.display = "flex";
+	}
+}
+
+function closeModal() {
+	document.getElementById("mobile-warning").style.display = "none";
+}
+
+window.onload = showModal;
 loadChallenges();
